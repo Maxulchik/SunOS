@@ -1,0 +1,177 @@
+#!/bin/sh
+
+# Created at: 2025-03-09_1409
+# By: penguins_eggs v. 10.0.60
+# ==> Perri's Brewery edition <== 
+
+# NOTE: home, cdrom, dev, live, media, mnt, proc, run, sys and tmp
+#       need just to be removed in /home/eggs/.mnt/filesystem.squashfs
+# host: debian user: sun
+
+#############################################################
+
+# directory: .cache
+umount /home/eggs/.mnt/filesystem.squashfs/.cache
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/.cache
+#############################################################
+
+# directory: bin
+umount /home/eggs/.mnt/filesystem.squashfs/bin
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/bin
+#############################################################
+
+# directory: boot
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/boot
+#############################################################
+
+# directory: dev
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/dev
+#############################################################
+
+# directory: etc
+
+# etc has overlay
+
+# First, umount it from /home/eggs/
+umount /home/eggs/.mnt/filesystem.squashfs/etc
+
+# Second, umount it from /home/eggs/.overlay/lowerdir
+umount /home/eggs/.overlay/lowerdir/etc
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/etc
+#############################################################
+
+# directory: home
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+#############################################################
+
+# initrd.img = file
+rm -f /home/eggs/.mnt/filesystem.squashfs/initrd.img
+#############################################################
+
+# initrd.img.old = file
+rm -f /home/eggs/.mnt/filesystem.squashfs/initrd.img.old
+#############################################################
+
+# directory: lib
+umount /home/eggs/.mnt/filesystem.squashfs/lib
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/lib
+#############################################################
+
+# directory: lib64
+umount /home/eggs/.mnt/filesystem.squashfs/lib64
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/lib64
+#############################################################
+
+# directory: media
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/media
+#############################################################
+
+# directory: mnt
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/mnt
+#############################################################
+
+# directory: opt
+umount /home/eggs/.mnt/filesystem.squashfs/opt
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/opt
+#############################################################
+
+# directory: proc
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/proc
+#############################################################
+
+# directory: root
+umount /home/eggs/.mnt/filesystem.squashfs/root
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/root
+#############################################################
+
+# directory: run
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/run
+#############################################################
+
+# directory: sbin
+umount /home/eggs/.mnt/filesystem.squashfs/sbin
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/sbin
+#############################################################
+
+# directory: srv
+umount /home/eggs/.mnt/filesystem.squashfs/srv
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/srv
+#############################################################
+
+# directory: sys
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/sys
+#############################################################
+
+# directory: tmp
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/tmp
+#############################################################
+
+# directory: usr
+
+# usr has overlay
+
+# First, umount it from /home/eggs/
+umount /home/eggs/.mnt/filesystem.squashfs/usr
+
+# Second, umount it from /home/eggs/.overlay/lowerdir
+umount /home/eggs/.overlay/lowerdir/usr
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/usr
+#############################################################
+
+# directory: var
+
+# var has overlay
+
+# First, umount it from /home/eggs/
+umount /home/eggs/.mnt/filesystem.squashfs/var
+
+# Second, umount it from /home/eggs/.overlay/lowerdir
+umount /home/eggs/.overlay/lowerdir/var
+
+# remove in /home/eggs/.mnt/filesystem.squashfs and /home/eggs/.overlay/lowerdir
+rm -rf /home/eggs/.mnt/filesystem.squashfs/var
+#############################################################
+
+# vmlinuz = file
+rm -f /home/eggs/.mnt/filesystem.squashfs/vmlinuz
+#############################################################
+
+# vmlinuz.old = file
+rm -f /home/eggs/.mnt/filesystem.squashfs/vmlinuz.old
